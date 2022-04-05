@@ -1,5 +1,100 @@
 {% extends 'layout.html' %}
 
 {% block main %}
-    <h1> {{ text }} </h1>
+    <form class="row g-3 justify-content-center" action="/upload" method="post">
+        <div class="col-auto">
+            <input type="radio" class="btn-check" name="operation" value="encryption" id="success-outlined" autocomplete="off" checked>
+            <label class="btn btn-outline-primary" for="success-outlined">Encrypt</label>
+        
+            <input type="radio" class="btn-check" name="operation" value="decryption" id="danger-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary" for="danger-outlined">Decrypt</label>
+        </div>
+        <div class="col-auto">
+            <input class="form-control" type="file" id="formFile" name="file">
+        </div>
+        <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-3">Upload</button>
+        </div>
+    </form>
+
+    <hr>
+    <div class="alert alert-primary text-center" role="alert">
+        Please, don't change filename after downloading it, to be able to decrypt it.
+    </div>
+    <hr>
+
+    <table class="table rounded-3 overflow-hidden text-center"> 
+        <thead class="bg-primary text-white">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Status</th>
+                <th scope="col">Options</th>
+                <th scope="col">Permitted Users</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>First File.png</td>
+                <td>Encrypted</td>
+                <td>
+                    <button type="button" class="btn btn-success">
+                        <i class="bi bi-download"></i>
+                    </button>
+                    <button type="button" class="btn btn-danger">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-primary">hazemessam</button>
+                    <button type="button" class="btn btn-primary">hzmessam</button>
+                    <button type="button" class="btn btn-primary">test50</button>
+                    <button type="button" class="btn btn-primary">
+                        <i class="bi bi-person-plus"></i>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Second File.txt</td>
+                <td>Encrypted</td>
+                <td>
+                    <button type="button" class="btn btn-success">
+                        <i class="bi bi-download"></i>
+                    </button>
+                    <button type="button" class="btn btn-danger">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-primary">hazemessam</button>
+                    <button type="button" class="btn btn-primary">test50</button>
+                    <button type="button" class="btn btn-primary">
+                        <i class="bi bi-person-plus"></i>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Test.pdf</td>
+                <td>Decrypted</td>
+                <td>
+                    <button type="button" class="btn btn-success">
+                        <i class="bi bi-download"></i>
+                    </button>
+                    <button type="button" class="btn btn-danger">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-primary">hzmessam</button>
+                    <button type="button" class="btn btn-primary">test50</button>
+                    <button type="button" class="btn btn-primary">
+                        <i class="bi bi-person-plus"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 {% endblock %}

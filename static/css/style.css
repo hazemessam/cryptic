@@ -1,0 +1,7 @@
+main {
+    padding-top: 50px;
+}
+
+thead {
+    border-bottom: 2px solid var(--bs-gray-300);
+}
