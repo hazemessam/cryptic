@@ -3,6 +3,7 @@ A web application that allows users to manage their confidential files.
 
 ## Table of Content
 - [Features](#features)
+- [ERD Diagram](#erd-diagram)
 - [Tech Stack](#tech-stack)
 - [Setup](#setup)
 
@@ -11,9 +12,12 @@ A web application that allows users to manage their confidential files.
 - Users can request to delete the encrypted file from the server after downloading it.
 - Only the owner of the file can decrypt it unless he permitted other users to do so.
 
+## ERD Diagram
+![ERD Diagram](erd.png)
 ## Tech Stack
 - Python
 - Django
+- Django REST Framework
 - SQLite
 
 ## Setup
