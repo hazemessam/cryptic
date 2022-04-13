@@ -14,6 +14,7 @@ A web application that allows users to manage their confidential files.
 
 ## ERD Diagram
 ![ERD Diagram](erd.png)
+
 ## Tech Stack
 - Python
 - Django

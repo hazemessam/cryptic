@@ -1,4 +1,5 @@
 {% extends 'layout.html' %}
+{% load static %}
 
 {% block main %}
     <form class="row g-3 justify-content-center" action="/upload" method="post">
@@ -26,18 +27,18 @@
     <table class="table rounded-3 overflow-hidden text-center"> 
         <thead class="bg-primary text-white">
             <tr>
-                <th scope="col">ID</th>
                 <th scope="col">Name</th>
                 <th scope="col">Status</th>
+                <th scope="col">Updated at</th>
                 <th scope="col">Options</th>
                 <th scope="col">Permitted Users</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>1</td>
                 <td>First File.png</td>
                 <td>Encrypted</td>
+                <td>9-10-2020 20:21</td>
                 <td>
                     <button type="button" class="btn btn-success">
                         <i class="bi bi-download"></i>
@@ -56,9 +57,9 @@
                 </td>
             </tr>
             <tr>
-                <td>2</td>
                 <td>Second File.txt</td>
                 <td>Encrypted</td>
+                <td>9-10-2020 20:21</td>
                 <td>
                     <button type="button" class="btn btn-success">
                         <i class="bi bi-download"></i>
@@ -76,9 +77,9 @@
                 </td>
             </tr>
             <tr>
-                <td>3</td>
                 <td>Test.pdf</td>
                 <td>Decrypted</td>
+                <td>9-10-2020 20:21</td>
                 <td>
                     <button type="button" class="btn btn-success">
                         <i class="bi bi-download"></i>
@@ -97,4 +98,8 @@
             </tr>
         </tbody>
     </table>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'js/files.js' %}"></script>
 {% endblock %}
