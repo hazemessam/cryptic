@@ -34,7 +34,7 @@ cd cryptic
 
 #### 3. Create a virtual environment
 ```bash
-python3 -m venv venv
+python -m venv venv
 ```
 
 #### 4. Activate the virtual environment
@@ -44,17 +44,17 @@ source venv/bin/activate
 
 #### 5. Install the dependances
 ```bash
-pip3 install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 #### 6. Migrate the database
 ```bash
-python3 manage.py migrate
+python manage.py migrate
 ```
 
 #### 7. Run the project
 ```bash
-python3 manage.py runserver
+python manage.py runserver
 ```
 
 #### 7. Now check http://localhost:8000
