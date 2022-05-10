@@ -135,6 +135,6 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-AUTH_USER_MODEL = 'users.User'
-
 CORS_ALLOW_ALL_ORIGINS = True
+
+JWT_LIFETIME_IN_DAYS = 7
